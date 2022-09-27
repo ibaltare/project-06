@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37131A1A28E27FAC00948AB1 /* EntityHeroLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37131A1628E27FAC00948AB1 /* EntityHeroLocation+CoreDataClass.swift */; };
+		37131A1C28E27FAC00948AB1 /* EntityHero+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37131A1828E27FAC00948AB1 /* EntityHero+CoreDataClass.swift */; };
+		37131A1F28E286B400948AB1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37131A1E28E286B400948AB1 /* CoreDataManager.swift */; };
 		371946F728E0C1B2006C43EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371946F628E0C1B2006C43EC /* AppDelegate.swift */; };
 		371946F928E0C1B2006C43EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371946F828E0C1B2006C43EC /* SceneDelegate.swift */; };
 		3719470128E0C1B2006C43EC /* HeroMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 371946FF28E0C1B2006C43EC /* HeroMap.xcdatamodeld */; };
@@ -27,6 +30,8 @@
 		3719474D28E11419006C43EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719474C28E11419006C43EC /* Constants.swift */; };
 		3719474F28E123CE006C43EC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719474E28E123CE006C43EC /* UIViewControllerExtension.swift */; };
 		3719475128E12E09006C43EC /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719475028E12E09006C43EC /* HeroModel.swift */; };
+		37619C2D28E299210008178B /* EntityHeroLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37619C2928E299210008178B /* EntityHeroLocation+CoreDataProperties.swift */; };
+		37619C2F28E299210008178B /* EntityHero+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37619C2B28E299210008178B /* EntityHero+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37131A1628E27FAC00948AB1 /* EntityHeroLocation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntityHeroLocation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		37131A1828E27FAC00948AB1 /* EntityHero+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntityHero+CoreDataClass.swift"; sourceTree = "<group>"; };
+		37131A1E28E286B400948AB1 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		371946F328E0C1B2006C43EC /* HeroMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		371946F628E0C1B2006C43EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		371946F828E0C1B2006C43EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +78,8 @@
 		3719474C28E11419006C43EC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3719474E28E123CE006C43EC /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		3719475028E12E09006C43EC /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
+		37619C2928E299210008178B /* EntityHeroLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntityHeroLocation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		37619C2B28E299210008178B /* EntityHero+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntityHero+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37131A0D28E2733200948AB1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				371946FF28E0C1B2006C43EC /* HeroMap.xcdatamodeld */,
+				37619C2B28E299210008178B /* EntityHero+CoreDataProperties.swift */,
+				37619C2928E299210008178B /* EntityHeroLocation+CoreDataProperties.swift */,
+				37131A1628E27FAC00948AB1 /* EntityHeroLocation+CoreDataClass.swift */,
+				37131A1828E27FAC00948AB1 /* EntityHero+CoreDataClass.swift */,
+				37131A1E28E286B400948AB1 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		371946EA28E0C1B2006C43EC = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +152,6 @@
 				3719473828E0C87A006C43EC /* Models */,
 				3719472C28E0C62A006C43EC /* UI */,
 				3719470428E0C1B4006C43EC /* LaunchScreen.storyboard */,
-				371946FF28E0C1B2006C43EC /* HeroMap.xcdatamodeld */,
 			);
 			path = HeroMap;
 			sourceTree = "<group>";
@@ -233,6 +255,7 @@
 		3719473828E0C87A006C43EC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				37131A0D28E2733200948AB1 /* CoreData */,
 				3719474828E0D1EB006C43EC /* ViewModel.swift */,
 				3719475028E12E09006C43EC /* HeroModel.swift */,
 			);
@@ -428,15 +451,20 @@
 				3719473028E0C698006C43EC /* LoginViewController.swift in Sources */,
 				3719470128E0C1B2006C43EC /* HeroMap.xcdatamodeld in Sources */,
 				3719474428E0CA77006C43EC /* HomeViewModel.swift in Sources */,
+				37619C2D28E299210008178B /* EntityHeroLocation+CoreDataProperties.swift in Sources */,
 				371946F728E0C1B2006C43EC /* AppDelegate.swift in Sources */,
+				37131A1F28E286B400948AB1 /* CoreDataManager.swift in Sources */,
+				37131A1C28E27FAC00948AB1 /* EntityHero+CoreDataClass.swift in Sources */,
 				3719474B28E11361006C43EC /* NetworkService.swift in Sources */,
 				3719475128E12E09006C43EC /* HeroModel.swift in Sources */,
 				3719474D28E11419006C43EC /* Constants.swift in Sources */,
 				3719473628E0C714006C43EC /* LoginViewModel.swift in Sources */,
 				371946F928E0C1B2006C43EC /* SceneDelegate.swift in Sources */,
 				3719474928E0D1EB006C43EC /* ViewModel.swift in Sources */,
+				37619C2F28E299210008178B /* EntityHero+CoreDataProperties.swift in Sources */,
 				3719474F28E123CE006C43EC /* UIViewControllerExtension.swift in Sources */,
 				3719473E28E0C9DB006C43EC /* HomeViewController.swift in Sources */,
+				37131A1A28E27FAC00948AB1 /* EntityHeroLocation+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

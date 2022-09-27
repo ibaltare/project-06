@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="EntityHero" representedClassName="EntityHero" syncable="YES">
+        <attribute name="descrip" attributeType="String"/>
+        <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="photo" attributeType="URI"/>
+        <relationship name="relationToLocation" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EntityHeroLocation" inverseName="relationToHero" inverseEntity="EntityHeroLocation"/>
+        <fetchIndex name="byheroNameIndex">
+            <fetchIndexElement property="name" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="EntityHeroLocation" representedClassName="EntityHeroLocation" syncable="YES">
+        <attribute name="dateShow" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="idHero" attributeType="String"/>
+        <attribute name="latitud" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitud" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="relationToHero" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EntityHero" inverseName="relationToLocation" inverseEntity="EntityHero"/>
+        <fetchIndex name="byHeroIndex">
+            <fetchIndexElement property="relationToHero" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="EntityHero" positionX="-315.6751708984375" positionY="-229.8296203613281" width="128" height="119"/>
+        <element name="EntityHeroLocation" positionX="15.84332275390625" positionY="-245.7757873535156" width="128" height="119"/>
+    </elements>
+</model>
