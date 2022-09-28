@@ -25,9 +25,9 @@ enum HTTPMethod: String {
 }
 
 enum ApiURL {
-    static let LOGIN = "https://vapor2022.herokuapp.com/api/auth/login"
-    static let HEROS_ALL = "https://vapor2022.herokuapp.com/api/heros/all"
-    static let HEROS_LOCATIONS = "https://vapor2022.herokuapp.com/api/heros/locations"
+    static let LOGIN = "https://dragonball.keepcoding.education/api/auth/login"
+    static let HEROS_ALL = "https://dragonball.keepcoding.education/api/heros/all"
+    static let HEROS_LOCATIONS = "https://dragonball.keepcoding.education/api/heros/locations"
 }
 
 enum KeyChain: String {

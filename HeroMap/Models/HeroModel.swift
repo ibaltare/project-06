@@ -17,9 +17,9 @@ struct Hero: Decodable {
 
 struct HeroLocation: Decodable {
     let id: String
-    let latitud: Double
-    let longitud: Double
-    let dateShow: Date
+    let latitud: String
+    let longitud: String
+    let dateShow: String
     let hero: HeroID
     
     struct HeroID: Decodable {

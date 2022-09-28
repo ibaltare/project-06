@@ -25,7 +25,6 @@
 		3719473F28E0C9DB006C43EC /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3719473D28E0C9DB006C43EC /* HomeViewController.xib */; };
 		3719474428E0CA77006C43EC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719474328E0CA77006C43EC /* HomeViewModel.swift */; };
 		3719474728E0D0A9006C43EC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3719474628E0D0A9006C43EC /* KeychainSwift */; };
-		3719474928E0D1EB006C43EC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719474828E0D1EB006C43EC /* ViewModel.swift */; };
 		3719474B28E11361006C43EC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719474A28E11360006C43EC /* NetworkService.swift */; };
 		3719474D28E11419006C43EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719474C28E11419006C43EC /* Constants.swift */; };
 		3719474F28E123CE006C43EC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719474E28E123CE006C43EC /* UIViewControllerExtension.swift */; };
@@ -73,7 +72,6 @@
 		3719473C28E0C9DB006C43EC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3719473D28E0C9DB006C43EC /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		3719474328E0CA77006C43EC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		3719474828E0D1EB006C43EC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		3719474A28E11360006C43EC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		3719474C28E11419006C43EC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3719474E28E123CE006C43EC /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -256,7 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				37131A0D28E2733200948AB1 /* CoreData */,
-				3719474828E0D1EB006C43EC /* ViewModel.swift */,
 				3719475028E12E09006C43EC /* HeroModel.swift */,
 			);
 			path = Models;
@@ -460,7 +457,6 @@
 				3719474D28E11419006C43EC /* Constants.swift in Sources */,
 				3719473628E0C714006C43EC /* LoginViewModel.swift in Sources */,
 				371946F928E0C1B2006C43EC /* SceneDelegate.swift in Sources */,
-				3719474928E0D1EB006C43EC /* ViewModel.swift in Sources */,
 				37619C2F28E299210008178B /* EntityHero+CoreDataProperties.swift in Sources */,
 				3719474F28E123CE006C43EC /* UIViewControllerExtension.swift in Sources */,
 				3719473E28E0C9DB006C43EC /* HomeViewController.swift in Sources */,

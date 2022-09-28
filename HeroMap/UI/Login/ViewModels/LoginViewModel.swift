@@ -32,13 +32,13 @@ final class LoginViewModel {
         
         NetworkService.shared.networkRequest(url: ApiURL.LOGIN, credentials: base64LoginString, httpMethod: HTTPMethod.post) {[weak self] (result: Result<String, NetworkError>) in
             switch result {
-            case .success(let success): self?.loginSuccess(token: success)
+            case .success(let success): self?.loginSuccess(with: success)
             case .failure(_): self?.onError?("Error de Autenticación")
             }
         }
     }
     
-    private func loginSuccess(token: String) {
+    private func loginSuccess(with token: String) {
         self.keyChain.set(token, forKey: KeyChain.token.rawValue)
         self.onSuccess?()
     }

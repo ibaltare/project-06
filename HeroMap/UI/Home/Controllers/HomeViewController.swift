@@ -15,6 +15,9 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         title = "Heroes"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Salir", style: .done, target: self, action: #selector(signOutTap))
+        viewModel.onError = onError(message:)
+        viewModel.onSuccess = onSucces
+        viewModel.loadHeroes()
     }
     
     @objc func signOutTap(){
@@ -25,4 +28,15 @@ final class HomeViewController: UIViewController {
         }
     }
 
+}
+
+extension HomeViewController {
+    func onSucces() {
+    }
+    
+    func onError(message: String) {
+        DispatchQueue.main.async {
+            self.showAlert(title: "", message: message)
+        }
+    }
 }
