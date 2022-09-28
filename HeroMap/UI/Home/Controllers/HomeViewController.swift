@@ -72,5 +72,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    // MARK: call Animation
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.transform = CGAffineTransform(scaleX: 0, y: 0)
+        UIView.animate(withDuration: 0.5, delay: 0.05 * Double(indexPath.row)) {
+            cell.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }
+
+    }
     
 }

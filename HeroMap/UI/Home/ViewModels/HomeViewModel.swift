@@ -26,7 +26,7 @@ final class HomeViewModel {
         do {
             keyChain.delete(KeyChain.token.rawValue)
             try CoreDataManager.shared.deleteAll()
-            try CoreDataManager.shared.deleteAllLocations()
+            //try CoreDataManager.shared.deleteAllLocations()
             print("heroes exist.. \(try CoreDataManager.shared.getLocalHeroes().count)")
             print("locations exist.. \(try CoreDataManager.shared.getLocalHeroesLocations().count)")
         } catch {

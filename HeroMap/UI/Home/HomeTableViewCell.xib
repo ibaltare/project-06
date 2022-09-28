@@ -11,44 +11,47 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" rowHeight="98" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="HeroMap" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" rowHeight="100" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="HeroMap" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HoF-R8-bkD">
-                        <rect key="frame" x="8" y="8" width="304" height="82"/>
+                        <rect key="frame" x="8" y="8" width="304" height="84"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ryd-9k-3hU">
-                                <rect key="frame" x="8" y="8" width="64" height="64"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ryd-9k-3hU">
+                                <rect key="frame" x="8" y="8" width="68" height="68"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="cyW-cY-UYW"/>
-                                    <constraint firstAttribute="height" constant="64" id="fbV-fb-mhY"/>
+                                    <constraint firstAttribute="height" constant="68" id="4IK-bP-lb0"/>
+                                    <constraint firstAttribute="width" constant="68" id="F2L-GX-y6U"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3g-3n-x0z">
-                                <rect key="frame" x="88" y="30.666666666666664" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="92" y="30" width="51.333333333333343" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstItem="d3g-3n-x0z" firstAttribute="leading" secondItem="ryd-9k-3hU" secondAttribute="trailing" constant="16" id="Ao6-yk-tAh"/>
-                            <constraint firstItem="d3g-3n-x0z" firstAttribute="centerY" secondItem="HoF-R8-bkD" secondAttribute="centerY" id="HGR-Fv-AV7"/>
-                            <constraint firstItem="ryd-9k-3hU" firstAttribute="top" secondItem="HoF-R8-bkD" secondAttribute="top" constant="8" id="bsy-Mb-SZ0"/>
-                            <constraint firstItem="ryd-9k-3hU" firstAttribute="leading" secondItem="HoF-R8-bkD" secondAttribute="leading" constant="8" id="d79-jO-hQo"/>
+                            <constraint firstItem="d3g-3n-x0z" firstAttribute="centerY" secondItem="HoF-R8-bkD" secondAttribute="centerY" id="4da-WO-TA7"/>
+                            <constraint firstItem="ryd-9k-3hU" firstAttribute="centerY" secondItem="HoF-R8-bkD" secondAttribute="centerY" id="FDq-bI-zrG"/>
+                            <constraint firstItem="d3g-3n-x0z" firstAttribute="leading" secondItem="ryd-9k-3hU" secondAttribute="trailing" constant="16" id="Fnz-4T-GcP"/>
+                            <constraint firstAttribute="height" constant="84" id="VFf-CX-ClP"/>
+                            <constraint firstItem="ryd-9k-3hU" firstAttribute="leading" secondItem="HoF-R8-bkD" secondAttribute="leading" constant="8" id="utG-5g-s7p"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="HoF-R8-bkD" secondAttribute="bottom" constant="8" id="JQo-qC-fXR"/>
-                    <constraint firstItem="HoF-R8-bkD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="O1y-GW-vhg"/>
-                    <constraint firstItem="HoF-R8-bkD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="QVY-s9-Og4"/>
-                    <constraint firstAttribute="trailing" secondItem="HoF-R8-bkD" secondAttribute="trailing" constant="8" id="jei-on-lHS"/>
+                    <constraint firstItem="HoF-R8-bkD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="0J9-Bb-UA8"/>
+                    <constraint firstAttribute="bottom" secondItem="HoF-R8-bkD" secondAttribute="bottom" constant="8" id="7PT-oG-HGb"/>
+                    <constraint firstItem="HoF-R8-bkD" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="OWr-35-I1f"/>
+                    <constraint firstItem="HoF-R8-bkD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="ZO8-kc-L8y"/>
+                    <constraint firstAttribute="trailing" secondItem="HoF-R8-bkD" secondAttribute="trailing" constant="8" id="b8S-h3-aeg"/>
+                    <constraint firstItem="HoF-R8-bkD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gC2-Ie-6wM"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -57,12 +60,12 @@
                 <outlet property="name" destination="d3g-3n-x0z" id="KXS-Sc-Sr9"/>
                 <outlet property="photo" destination="ryd-9k-3hU" id="GGw-ow-e4Z"/>
             </connections>
-            <point key="canvasLocation" x="104.61538461538461" y="41.943127962085306"/>
+            <point key="canvasLocation" x="160" y="2.8436018957345972"/>
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

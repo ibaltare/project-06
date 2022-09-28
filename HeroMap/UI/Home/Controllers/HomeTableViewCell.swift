@@ -23,6 +23,7 @@ class HomeTableViewCell: UITableViewCell {
         contentCell.layer.shadowOffset = .zero
         contentCell.layer.shadowOpacity = 0.7
         contentCell.layer.shadowRadius = 4.0
+        photo.layer.cornerRadius = (photo.bounds.height)/2
         
     }
 
