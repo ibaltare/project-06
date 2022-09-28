@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="HeroMap" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="cjD-7W-2AE" id="tws-It-pfq"/>
+                <outlet property="tableView" destination="dEt-cA-6YI" id="jsQ-dY-rPn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,17 +21,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXZ-Dv-Hi4">
-                    <rect key="frame" x="186" y="438" width="46" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="cjD-7W-2AE">
-                    <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="56"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dEt-cA-6YI">
+                    <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -36,6 +36,10 @@
                 <constraint firstItem="cjD-7W-2AE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="29r-R5-Jtx"/>
                 <constraint firstItem="cjD-7W-2AE" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Cxq-p5-z1T"/>
                 <constraint firstItem="cjD-7W-2AE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Dvh-53-GKA"/>
+                <constraint firstItem="dEt-cA-6YI" firstAttribute="top" secondItem="cjD-7W-2AE" secondAttribute="bottom" id="NyA-7I-q1N"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dEt-cA-6YI" secondAttribute="bottom" id="O8f-Wy-5GS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dEt-cA-6YI" secondAttribute="trailing" id="has-fS-6eM"/>
+                <constraint firstItem="dEt-cA-6YI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="r6x-uD-OGg"/>
             </constraints>
             <point key="canvasLocation" x="139" y="81"/>
         </view>

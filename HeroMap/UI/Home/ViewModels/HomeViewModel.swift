@@ -12,6 +12,7 @@ final class HomeViewModel {
     private var keyChain: KeychainSwift
     var onError: ((String)->Void)?
     var onSuccess: (()->Void)?
+    private(set) var content: [Hero] = []
     
     init(keyChain: KeychainSwift = KeychainSwift(),
          onError: ((String)->Void)? = nil,
@@ -54,6 +55,8 @@ final class HomeViewModel {
 private extension HomeViewModel {
     func load(heroes: [EntityHero]){
         print("load table \(heroes.count)")
+        self.content = heroes.map { $0.hero }
+        self.onSuccess?()
     }
     
     func downloadHeroes() {
