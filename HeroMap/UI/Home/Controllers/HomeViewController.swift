@@ -20,7 +20,7 @@ final class HomeViewController: UIViewController {
         configureViews()
         tableView?.register( UINib(nibName: HomeTableViewCell.cellIdentifier, bundle: nil), forCellReuseIdentifier: HomeTableViewCell.cellIdentifier )
         viewModel.onError = onError(message:)
-        viewModel.onSuccess = onSucces
+        viewModel.onSuccessLoad = onSuccesLoad
         viewModel.loadHeroes()
     }
     
@@ -40,7 +40,7 @@ final class HomeViewController: UIViewController {
 }
 
 extension HomeViewController {
-    func onSucces() {
+    func onSuccesLoad() {
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }

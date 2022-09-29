@@ -36,8 +36,8 @@ final class CoreDataManager {
         try self.context.save()
     }
     
-    func save(locations: [HeroLocation], heroId: String) throws {
-        _ = locations.map { EntityHeroLocation.create(from: $0, for: heroId, context: self.context) }
+    func save(locations: [HeroLocation], eHero: EntityHero) throws {
+        _ = locations.map { EntityHeroLocation.create(from: $0, for: eHero, context: self.context) }
         try self.context.save()
     }
     

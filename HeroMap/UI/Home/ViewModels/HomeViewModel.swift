@@ -11,7 +11,7 @@ import KeychainSwift
 final class HomeViewModel {
     private var keyChain: KeychainSwift
     var onError: ((String)->Void)?
-    var onSuccess: (()->Void)?
+    var onSuccessLoad: (()->Void)?
     private(set) var content: [Hero] = []
     
     init(keyChain: KeychainSwift = KeychainSwift(),
@@ -19,7 +19,7 @@ final class HomeViewModel {
          onSucces: (()->Void)? = nil ) {
         self.keyChain = keyChain
         self.onError = onError
-        self.onSuccess = onSucces
+        self.onSuccessLoad = onSucces
     }
     
     func signOut(){
@@ -48,15 +48,12 @@ final class HomeViewModel {
             self.onError?("Error al leer los datos")
         }
     }
-    
-    
 }
 
 private extension HomeViewModel {
     func load(heroes: [EntityHero]){
-        print("load table \(heroes.count)")
         self.content = heroes.map { $0.hero }
-        self.onSuccess?()
+        self.onSuccessLoad?()
     }
     
     func downloadHeroes() {
@@ -85,14 +82,15 @@ private extension HomeViewModel {
                 self.onError?("Error al leer los datos")
                 return
             }
+            let eHeroes = try CoreDataManager.shared.getLocalHeroes()
             let group = DispatchGroup()
-            heroes.forEach { hero in
+            eHeroes.forEach { hero in
                 group.enter()
                 NetworkService.shared.networkRequest(url: ApiURL.HEROS_LOCATIONS, credentials: token, httpMethod: HTTPMethod.post, httpBody: Body(id: hero.id)) { [weak self, hero] (result: Result<[HeroLocation], NetworkError>) in
                     group.leave()
                     switch result {
                     case .success(let success):
-                        self?.downloadSuccess(from: success, for: hero.id)
+                        self?.downloadSuccess(from: success, for: hero)
                     case .failure(let failure):
                         self?.onError?(failure.localizedDescription)
                     }
@@ -106,9 +104,9 @@ private extension HomeViewModel {
         }
     }
     
-    func downloadSuccess(from locations: [HeroLocation], for heroId: String) {
+    func downloadSuccess(from locations: [HeroLocation], for eHero: EntityHero) {
         do {
-            try CoreDataManager.shared.save(locations: locations, heroId: heroId)
+            try CoreDataManager.shared.save(locations: locations, eHero: eHero)
         } catch {
             self.onError?("Error al guardar los datos")
         }
