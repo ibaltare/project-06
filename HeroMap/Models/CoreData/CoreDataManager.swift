@@ -20,8 +20,8 @@ final class CoreDataManager {
     }
     
     func getLocalHeroes() throws -> [EntityHero] {
-            let heroes = try context.fetch(EntityHero.fetchRequest())
-            return heroes
+        let heroes = try context.fetch(EntityHero.fetchRequest())
+        return heroes
     }
     
     func deleteAll() throws {
@@ -42,9 +42,21 @@ final class CoreDataManager {
     }
     
     func getLocalHeroesLocations() throws -> [EntityHeroLocation] {
-            let locations = try context.fetch(EntityHeroLocation.fetchRequest())
-            return locations
+        let locations = try context.fetch(EntityHeroLocation.fetchRequest())
+        return locations
     }
+    
+    func fetchHeroes(by predicate: String, value: String) throws -> [EntityHero]{
+        let fetchRequest : NSFetchRequest<EntityHero> = EntityHero.fetchRequest()
+        let predicate = NSPredicate(format: predicate, value)
+        let sort = NSSortDescriptor(key: "name", ascending: true, selector: #selector(NSString.localizedStandardCompare))
+        fetchRequest.sortDescriptors = [sort]
+        fetchRequest.predicate = predicate
+        let fetchedResults = try context.fetch(fetchRequest)
+        return fetchedResults
+    }
+    
+    
     
     func getHero(by name:String) {
         

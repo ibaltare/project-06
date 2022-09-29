@@ -29,6 +29,9 @@
 		3719474D28E11419006C43EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719474C28E11419006C43EC /* Constants.swift */; };
 		3719474F28E123CE006C43EC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719474E28E123CE006C43EC /* UIViewControllerExtension.swift */; };
 		3719475128E12E09006C43EC /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719475028E12E09006C43EC /* HeroModel.swift */; };
+		3746345D28E55681002A3763 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3746345B28E55681002A3763 /* MapViewController.swift */; };
+		3746345E28E55681002A3763 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3746345C28E55681002A3763 /* MapViewController.xib */; };
+		3746346028E556A6002A3763 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3746345F28E556A6002A3763 /* MapViewModel.swift */; };
 		37619C2D28E299210008178B /* EntityHeroLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37619C2928E299210008178B /* EntityHeroLocation+CoreDataProperties.swift */; };
 		37619C2F28E299210008178B /* EntityHero+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37619C2B28E299210008178B /* EntityHero+CoreDataProperties.swift */; };
 		37D4069D28E40A3C00214F1D /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D4069B28E40A3C00214F1D /* HomeTableViewCell.swift */; };
@@ -79,6 +82,9 @@
 		3719474C28E11419006C43EC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3719474E28E123CE006C43EC /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		3719475028E12E09006C43EC /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
+		3746345B28E55681002A3763 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3746345C28E55681002A3763 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		3746345F28E556A6002A3763 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		37619C2928E299210008178B /* EntityHeroLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntityHeroLocation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		37619C2B28E299210008178B /* EntityHero+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntityHero+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		37D4069B28E40A3C00214F1D /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -279,6 +285,9 @@
 		3719473A28E0C947006C43EC /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				3746345A28E55600002A3763 /* ViewModels */,
+				3746345928E555F4002A3763 /* Controllers */,
+				3746345828E555E6002A3763 /* Views */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -312,6 +321,30 @@
 			isa = PBXGroup;
 			children = (
 				3719474328E0CA77006C43EC /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3746345828E555E6002A3763 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3746345C28E55681002A3763 /* MapViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3746345928E555F4002A3763 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3746345B28E55681002A3763 /* MapViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3746345A28E55600002A3763 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3746345F28E556A6002A3763 /* MapViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -427,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3719470628E0C1B4006C43EC /* LaunchScreen.storyboard in Resources */,
+				3746345E28E55681002A3763 /* MapViewController.xib in Resources */,
 				3719470328E0C1B4006C43EC /* Assets.xcassets in Resources */,
 				3719473128E0C698006C43EC /* LoginViewController.xib in Resources */,
 				37D4069E28E40A3C00214F1D /* HomeTableViewCell.xib in Resources */,
@@ -462,9 +496,11 @@
 				371946F728E0C1B2006C43EC /* AppDelegate.swift in Sources */,
 				37131A1F28E286B400948AB1 /* CoreDataManager.swift in Sources */,
 				37131A1C28E27FAC00948AB1 /* EntityHero+CoreDataClass.swift in Sources */,
+				3746345D28E55681002A3763 /* MapViewController.swift in Sources */,
 				3719474B28E11361006C43EC /* NetworkService.swift in Sources */,
 				3719475128E12E09006C43EC /* HeroModel.swift in Sources */,
 				3719474D28E11419006C43EC /* Constants.swift in Sources */,
+				3746346028E556A6002A3763 /* MapViewModel.swift in Sources */,
 				3719473628E0C714006C43EC /* LoginViewModel.swift in Sources */,
 				371946F928E0C1B2006C43EC /* SceneDelegate.swift in Sources */,
 				37619C2F28E299210008178B /* EntityHero+CoreDataProperties.swift in Sources */,

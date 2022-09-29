@@ -72,6 +72,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let hero = viewModel.content[indexPath.row]
+        let nextVC = MapViewController()
+        nextVC.set(model: hero)
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
     // MARK: call Animation
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.transform = CGAffineTransform(scaleX: 0, y: 0)

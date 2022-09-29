@@ -16,10 +16,10 @@ final class HomeViewModel {
     
     init(keyChain: KeychainSwift = KeychainSwift(),
          onError: ((String)->Void)? = nil,
-         onSucces: (()->Void)? = nil ) {
+         onSuccessLoaded: (()->Void)? = nil ) {
         self.keyChain = keyChain
         self.onError = onError
-        self.onSuccessLoad = onSucces
+        self.onSuccessLoad = onSuccessLoaded
     }
     
     func signOut(){
@@ -38,10 +38,8 @@ final class HomeViewModel {
         do {
             let heroes = try CoreDataManager.shared.getLocalHeroes()
             if heroes.count == 0 {
-                print("download")
                 downloadHeroes()
             } else {
-                print("load core data")
                 load(heroes: heroes)
             }
         } catch {
@@ -52,7 +50,7 @@ final class HomeViewModel {
 
 private extension HomeViewModel {
     func load(heroes: [EntityHero]){
-        self.content = heroes.map { $0.hero }
+        self.content = heroes.map { $0.hero }.sorted { $0.name < $1.name }
         self.onSuccessLoad?()
     }
     
