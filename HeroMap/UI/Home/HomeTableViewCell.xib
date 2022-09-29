@@ -24,8 +24,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ryd-9k-3hU">
                                 <rect key="frame" x="8" y="8" width="68" height="68"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="4IK-bP-lb0"/>
-                                    <constraint firstAttribute="width" constant="68" id="F2L-GX-y6U"/>
+                                    <constraint firstAttribute="width" constant="68" id="b7X-Ub-ykh"/>
+                                    <constraint firstAttribute="height" constant="68" id="qPo-Tv-pFG"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3g-3n-x0z">
@@ -37,21 +37,19 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstItem="d3g-3n-x0z" firstAttribute="centerY" secondItem="HoF-R8-bkD" secondAttribute="centerY" id="4da-WO-TA7"/>
-                            <constraint firstItem="ryd-9k-3hU" firstAttribute="centerY" secondItem="HoF-R8-bkD" secondAttribute="centerY" id="FDq-bI-zrG"/>
-                            <constraint firstItem="d3g-3n-x0z" firstAttribute="leading" secondItem="ryd-9k-3hU" secondAttribute="trailing" constant="16" id="Fnz-4T-GcP"/>
-                            <constraint firstAttribute="height" constant="84" id="VFf-CX-ClP"/>
-                            <constraint firstItem="ryd-9k-3hU" firstAttribute="leading" secondItem="HoF-R8-bkD" secondAttribute="leading" constant="8" id="utG-5g-s7p"/>
+                            <constraint firstItem="ryd-9k-3hU" firstAttribute="centerY" secondItem="HoF-R8-bkD" secondAttribute="centerY" id="9xV-tq-mQy"/>
+                            <constraint firstAttribute="height" constant="84" id="Gc5-Hy-mfK"/>
+                            <constraint firstItem="d3g-3n-x0z" firstAttribute="leading" secondItem="ryd-9k-3hU" secondAttribute="trailing" constant="16" id="KYz-eJ-Xpv"/>
+                            <constraint firstItem="ryd-9k-3hU" firstAttribute="leading" secondItem="HoF-R8-bkD" secondAttribute="leading" constant="8" id="Udo-Va-s8e"/>
+                            <constraint firstItem="d3g-3n-x0z" firstAttribute="centerY" secondItem="HoF-R8-bkD" secondAttribute="centerY" id="eVn-9j-URm"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="HoF-R8-bkD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="0J9-Bb-UA8"/>
-                    <constraint firstAttribute="bottom" secondItem="HoF-R8-bkD" secondAttribute="bottom" constant="8" id="7PT-oG-HGb"/>
-                    <constraint firstItem="HoF-R8-bkD" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="OWr-35-I1f"/>
-                    <constraint firstItem="HoF-R8-bkD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="ZO8-kc-L8y"/>
-                    <constraint firstAttribute="trailing" secondItem="HoF-R8-bkD" secondAttribute="trailing" constant="8" id="b8S-h3-aeg"/>
-                    <constraint firstItem="HoF-R8-bkD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gC2-Ie-6wM"/>
+                    <constraint firstAttribute="bottom" secondItem="HoF-R8-bkD" secondAttribute="bottom" constant="8" id="E2I-Bc-eUb"/>
+                    <constraint firstItem="HoF-R8-bkD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="OwZ-lI-6si"/>
+                    <constraint firstAttribute="trailing" secondItem="HoF-R8-bkD" secondAttribute="trailing" constant="8" id="V7Z-Vb-K7j"/>
+                    <constraint firstItem="HoF-R8-bkD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="nI1-Ak-J2J"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -60,7 +58,7 @@
                 <outlet property="name" destination="d3g-3n-x0z" id="KXS-Sc-Sr9"/>
                 <outlet property="photo" destination="ryd-9k-3hU" id="GGw-ow-e4Z"/>
             </connections>
-            <point key="canvasLocation" x="160" y="2.8436018957345972"/>
+            <point key="canvasLocation" x="160" y="-22.748815165876778"/>
         </tableViewCell>
     </objects>
     <resources>
