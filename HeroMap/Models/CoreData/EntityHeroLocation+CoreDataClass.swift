@@ -20,11 +20,19 @@ extension EntityHeroLocation {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZ"
         eLocation.id = location.id
-        eLocation.dateShow = dateFormatter.date(from: location.dateShow)
+        eLocation.dateShow = dateFormatter.date(from: location.dateShow) ?? Date()
         eLocation.latitud = Double(location.latitud) ?? 0
         eLocation.longitud = Double(location.longitud) ?? 0
         eLocation.idHero = hero.id
         hero.mutableSetValue(forKey: "relationToLocation").add(eLocation)
         return eLocation
+    }
+    
+    var heroLocation: HeroLocation {
+        HeroLocation(id: self.id,
+                     latitud: String(describing: self.latitud),
+                     longitud: String(describing: self.longitud),
+                     dateShow: String(describing: self.dateShow),
+                     hero: HeroLocation.HeroID(id: self.idHero))
     }
 }

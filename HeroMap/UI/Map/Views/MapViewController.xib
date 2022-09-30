@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="HeroMap" customModuleProvider="target">
             <connections>
+                <outlet property="contentPhoto" destination="hMY-Qb-TbW" id="3fn-nk-MXG"/>
+                <outlet property="mapView" destination="RqT-dx-XTS" id="8TZ-5y-LiK"/>
+                <outlet property="photo" destination="GRB-9U-lAE" id="YF0-Kk-GCx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,16 +24,35 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RqT-dx-XTS">
-                    <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                    <rect key="frame" x="0.0" y="47" width="390" height="797"/>
                     <standardMapConfiguration key="preferredConfiguration"/>
                 </mapView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMY-Qb-TbW">
+                    <rect key="frame" x="8" y="55" width="76" height="76"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GRB-9U-lAE">
+                            <rect key="frame" x="4" y="4" width="68" height="68"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                    <constraints>
+                        <constraint firstItem="GRB-9U-lAE" firstAttribute="top" secondItem="hMY-Qb-TbW" secondAttribute="top" constant="4" id="3BT-fL-gCm"/>
+                        <constraint firstAttribute="trailing" secondItem="GRB-9U-lAE" secondAttribute="trailing" constant="4" id="JEs-fh-sgn"/>
+                        <constraint firstItem="GRB-9U-lAE" firstAttribute="leading" secondItem="hMY-Qb-TbW" secondAttribute="leading" constant="4" id="PDB-yA-fAT"/>
+                        <constraint firstAttribute="height" constant="76" id="b4V-MZ-hA8"/>
+                        <constraint firstAttribute="bottom" secondItem="GRB-9U-lAE" secondAttribute="bottom" constant="4" id="f8o-FC-djZ"/>
+                        <constraint firstAttribute="width" constant="76" id="fJj-cf-lEq"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="hMY-Qb-TbW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="ER6-vr-cqC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RqT-dx-XTS" secondAttribute="trailing" id="KSf-Yc-rdn"/>
                 <constraint firstItem="RqT-dx-XTS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZDo-WQ-Uaa"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RqT-dx-XTS" secondAttribute="bottom" id="vra-GW-rDX"/>
+                <constraint firstItem="hMY-Qb-TbW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="hht-H4-sSX"/>
+                <constraint firstAttribute="bottom" secondItem="RqT-dx-XTS" secondAttribute="bottom" id="vra-GW-rDX"/>
                 <constraint firstItem="RqT-dx-XTS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="w4W-tZ-YUJ"/>
             </constraints>
             <point key="canvasLocation" x="88" y="21"/>
@@ -39,6 +61,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

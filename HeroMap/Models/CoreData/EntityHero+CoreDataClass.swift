@@ -32,7 +32,6 @@ extension EntityHero {
              description: self.descrip,
              photo: self.photo ,
              favorite: self.favorite
-             //shouldPresentDisclosure: (self.transformations?.count ?? 0) > 0)
         )
     }
 }

@@ -16,9 +16,9 @@ extension EntityHeroLocation {
         return NSFetchRequest<EntityHeroLocation>(entityName: "EntityHeroLocation")
     }
 
-    @NSManaged public var dateShow: Date?
-    @NSManaged public var id: String?
-    @NSManaged public var idHero: String?
+    @NSManaged public var dateShow: Date
+    @NSManaged public var id: String
+    @NSManaged public var idHero: String
     @NSManaged public var latitud: Double
     @NSManaged public var longitud: Double
     @NSManaged public var relationToHero: EntityHero?

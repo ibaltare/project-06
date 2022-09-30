@@ -29,6 +29,7 @@
 		3719474D28E11419006C43EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719474C28E11419006C43EC /* Constants.swift */; };
 		3719474F28E123CE006C43EC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719474E28E123CE006C43EC /* UIViewControllerExtension.swift */; };
 		3719475128E12E09006C43EC /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719475028E12E09006C43EC /* HeroModel.swift */; };
+		37389D9B28E7982600B74ADB /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37389D9A28E7982600B74ADB /* Place.swift */; };
 		3746345D28E55681002A3763 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3746345B28E55681002A3763 /* MapViewController.swift */; };
 		3746345E28E55681002A3763 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3746345C28E55681002A3763 /* MapViewController.xib */; };
 		3746346028E556A6002A3763 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3746345F28E556A6002A3763 /* MapViewModel.swift */; };
@@ -82,6 +83,7 @@
 		3719474C28E11419006C43EC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3719474E28E123CE006C43EC /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		3719475028E12E09006C43EC /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
+		37389D9A28E7982600B74ADB /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		3746345B28E55681002A3763 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3746345C28E55681002A3763 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		3746345F28E556A6002A3763 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 			children = (
 				37131A0D28E2733200948AB1 /* CoreData */,
 				3719475028E12E09006C43EC /* HeroModel.swift */,
+				37389D9A28E7982600B74ADB /* Place.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				3719475128E12E09006C43EC /* HeroModel.swift in Sources */,
 				3719474D28E11419006C43EC /* Constants.swift in Sources */,
 				3746346028E556A6002A3763 /* MapViewModel.swift in Sources */,
+				37389D9B28E7982600B74ADB /* Place.swift in Sources */,
 				3719473628E0C714006C43EC /* LoginViewModel.swift in Sources */,
 				371946F928E0C1B2006C43EC /* SceneDelegate.swift in Sources */,
 				37619C2F28E299210008178B /* EntityHero+CoreDataProperties.swift in Sources */,
