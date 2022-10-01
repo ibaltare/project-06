@@ -35,6 +35,7 @@ final class HomeViewController: UIViewController {
     private func configureViews() {
         tableView.delegate = self
         tableView.dataSource = self
+        searchBar.delegate = self
     }
 
 }
@@ -81,11 +82,17 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: call Animation
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.transform = CGAffineTransform(scaleX: 0, y: 0)
-        UIView.animate(withDuration: 0.5, delay: 0.05 * Double(indexPath.row)) {
-            cell.transform = CGAffineTransform(scaleX: 1, y: 1)
+        cell.transform = CGAffineTransform(translationX: 0, y: cell.contentView.frame.height)
+        UIView.animate(withDuration: 0.4, delay: 0.04 * Double(indexPath.row)) {
+            cell.transform = CGAffineTransform(translationX: cell.contentView.frame.width, y: cell.contentView.frame.height)
         }
+    }
+}
 
+extension HomeViewController: UISearchBarDelegate{
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.searchHero(by: searchText)
     }
     
 }

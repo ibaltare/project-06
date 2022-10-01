@@ -26,7 +26,6 @@ final class HomeViewModel {
         do {
             keyChain.delete(KeyChain.token.rawValue)
             try CoreDataManager.shared.deleteAll()
-            //try CoreDataManager.shared.deleteAllLocations()
             print("heroes exist.. \(try CoreDataManager.shared.getLocalHeroes().count)")
             print("locations exist.. \(try CoreDataManager.shared.getLocalHeroesLocations().count)")
         } catch {
@@ -45,6 +44,17 @@ final class HomeViewModel {
         } catch {
             self.onError?("Error al leer los datos")
         }
+    }
+    
+    func searchHero(by name: String) {
+        guard !name.isEmpty else{
+            self.loadHeroes()
+            return
+        }
+        do {
+            let eHeroes = try CoreDataManager.shared.fetchHeroes(by: "name CONTAINS[c] %@", with: name)
+            self.load(heroes: eHeroes)
+        } catch { self.onError?("Error al leer los datos") }
     }
 }
 
