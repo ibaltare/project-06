@@ -217,7 +217,6 @@
 				3719472D28E0C65F006C43EC /* Login */,
 				3719473928E0C901006C43EC /* Home */,
 				3719473A28E0C947006C43EC /* Map */,
-				3719473B28E0C99B006C43EC /* Detail */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -293,13 +292,6 @@
 				3746345828E555E6002A3763 /* Views */,
 			);
 			path = Map;
-			sourceTree = "<group>";
-		};
-		3719473B28E0C99B006C43EC /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Detail;
 			sourceTree = "<group>";
 		};
 		3719474028E0C9E1006C43EC /* Views */ = {

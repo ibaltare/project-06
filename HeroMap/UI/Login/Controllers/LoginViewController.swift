@@ -13,14 +13,22 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var imgGoku: UIImageView!
+    @IBOutlet weak var backContainer: UIView!
     
     let viewModel = LoginViewModel()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        backContainer.center.y += view.bounds.height
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         viewModel.onSuccess = onLoginSucces
         viewModel.onError = onLoginError(message:)
+        prepareView()
+        showAnimation()
     }
     
     @IBAction func onLoginTap(_ sender: Any) {
@@ -30,6 +38,24 @@ final class LoginViewController: UIViewController {
                 activityIndicator.startAnimating()
                 viewModel.login(with: user, password: pass)
             }
+        }
+    }
+    
+    private func prepareView() {
+        backContainer.layer.cornerRadius = 16.0
+        backContainer.layer.shadowColor = UIColor.gray.cgColor
+        backContainer.layer.shadowOffset = .zero
+        backContainer.layer.shadowOpacity = 0.7
+        backContainer.layer.shadowRadius = 16.0
+        
+    }
+    
+    private func showAnimation() {
+        UIView.animate(withDuration: 1,
+                       delay: 1,
+                       usingSpringWithDamping: 0.75,
+                       initialSpringVelocity: 0) {
+            self.backContainer.center.y -= self.view.bounds.height
         }
     }
 }
