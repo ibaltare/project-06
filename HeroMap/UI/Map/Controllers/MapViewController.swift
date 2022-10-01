@@ -25,6 +25,7 @@ final class MapViewController: UIViewController {
         if let image = hero?.photo {
             update(image: image)
         }
+        showAnimation()
     }
 
     func set(model: Hero) {
@@ -35,6 +36,16 @@ final class MapViewController: UIViewController {
         photo.layer.cornerRadius = (photo.bounds.height)/2
         contentPhoto.layer.cornerRadius = (contentPhoto.bounds.height)/2
         photo.setImage(url: image)
+    }
+    
+    private func showAnimation() {
+        contentPhoto.transform = CGAffineTransform(scaleX: 0, y: 0)
+        UIView.animate(withDuration: 1,
+                       delay: 1,
+                       usingSpringWithDamping: 0.75,
+                       initialSpringVelocity: 0) {
+            self.contentPhoto.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }
     }
 
 }
