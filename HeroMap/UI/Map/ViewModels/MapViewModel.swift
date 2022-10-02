@@ -21,7 +21,10 @@ final class MapViewModel {
     
     func loadLocations(for hero: Hero?) {
         do {
-            guard let hero = hero, let eHero = try CoreDataManager.shared.fetchHeroes(by: "id == %@", with: hero.id).first else { return }
+            guard let hero = hero, let eHero = try CoreDataManager.shared.fetchHeroes(by: "id == %@", with: hero.id).first else {
+                self.onError?("No se encontraron registros")
+                return
+            }
             guard eHero.relationToLocation?.count ?? 0 > 0 else {
                 self.onError?("No hay localizaciones para \(eHero.name)")
                 return

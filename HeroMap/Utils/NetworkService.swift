@@ -7,7 +7,13 @@
 
 import Foundation
 
-final class NetworkService {
+protocol NetworkProtocol {
+    func networkRequest(url: String,credentials: String,httpMethod: HTTPMethod,completion: @escaping (Result<String, NetworkError>) -> Void)
+    
+    func networkRequest<R: Decodable, B: Encodable>(url: String,credentials: String,httpMethod: HTTPMethod,httpBody: B?,completion: @escaping (Result<R, NetworkError>) -> Void)
+}
+
+final class NetworkService: NetworkProtocol {
     
     static let shared = NetworkService()
     

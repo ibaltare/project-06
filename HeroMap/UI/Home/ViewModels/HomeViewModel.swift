@@ -13,13 +13,16 @@ final class HomeViewModel {
     var onError: ((String)->Void)?
     var onSuccessLoad: (()->Void)?
     private(set) var content: [Hero] = []
+    private var networkService: NetworkProtocol
     
     init(keyChain: KeychainSwift = KeychainSwift(),
          onError: ((String)->Void)? = nil,
-         onSuccessLoaded: (()->Void)? = nil ) {
+         onSuccessLoaded: (()->Void)? = nil,
+         networkService: NetworkProtocol = NetworkService.shared) {
         self.keyChain = keyChain
         self.onError = onError
         self.onSuccessLoad = onSuccessLoaded
+        self.networkService = networkService
     }
     
     func signOut(){
@@ -47,12 +50,13 @@ final class HomeViewModel {
     }
     
     func searchHero(by name: String) {
-        guard !name.isEmpty else{
-            self.loadHeroes()
-            return
-        }
         do {
-            let eHeroes = try CoreDataManager.shared.fetchHeroes(by: "name CONTAINS[c] %@", with: name)
+            var eHeroes: [EntityHero] = []
+            if name.isEmpty {
+                eHeroes = try CoreDataManager.shared.getLocalHeroes()
+            }else {
+                eHeroes = try CoreDataManager.shared.fetchHeroes(by: "name CONTAINS[c] %@", with: name)
+            }
             self.load(heroes: eHeroes)
         } catch { self.onError?("Error al leer los datos") }
     }
@@ -72,7 +76,7 @@ private extension HomeViewModel {
             self.onError?("Error al leer los datos")
             return
         }
-        NetworkService.shared.networkRequest(url: ApiURL.HEROS_ALL, credentials: token, httpMethod: HTTPMethod.post, httpBody: Body(name: "")) { [weak self] (result: Result<[Hero], NetworkError>) in
+        networkService.networkRequest(url: ApiURL.HEROS_ALL, credentials: token, httpMethod: HTTPMethod.post, httpBody: Body(name: "")) { [weak self] (result: Result<[Hero], NetworkError>) in
             switch result {
                 case .success(let success): self?.downloadSuccess(heroes: success)
                 case .failure(_): self?.onError?("Error al descargar los datos")
@@ -94,7 +98,7 @@ private extension HomeViewModel {
             let group = DispatchGroup()
             eHeroes.forEach { hero in
                 group.enter()
-                NetworkService.shared.networkRequest(url: ApiURL.HEROS_LOCATIONS, credentials: token, httpMethod: HTTPMethod.post, httpBody: Body(id: hero.id)) { [weak self, hero] (result: Result<[HeroLocation], NetworkError>) in
+                networkService.networkRequest(url: ApiURL.HEROS_LOCATIONS, credentials: token, httpMethod: HTTPMethod.post, httpBody: Body(id: hero.id)) { [weak self, hero] (result: Result<[HeroLocation], NetworkError>) in
                     group.leave()
                     switch result {
                     case .success(let success):
